@@ -8,6 +8,12 @@
 <br>
 ##참고사항<br>
 코드를 수정하는 방법에 어려움을 겪어 ChatGPT와 다양한 블로그 글의 도움을 받아 작성하였습니다.
+참고자료<br>
+git : https://github.com/augmentedstartups/Mask_RCNN<br>
+블로그 : https://hdongle.tistory.com/202<br>
+코드 수정 사항 참고 
+<br>https://github.com/matterport/Mask_RCNN/issues/1070<br>
+등등
 <br>
 Readme를 작성해본적이 없어 가독성이 떨어지는 점 죄송합니다.<br>
 <hr>
@@ -70,12 +76,17 @@ s[1]가 None일때 -1을 대신 집어 넣으면 가능하게 함으로 써 해�
 <br>
 <br>
 <hr>
-##실행 과정<br>
+##실행 과정<br><br>
+CUDA는 12.1<br>
+cudnn은 12.1에맞게 설치<br>
+아마 큰 의미는 없음<br><br>
 아나콘다 환경 제작<br>
 conda create --name (환경명) python=3.7 pip
+<br><br>
+#python 3.7가 아니면 작동이 정상적으로 안됨.<br><br>
+#3.7중에서도 3.7.16으로 진행함<br><br>
+pip install tensorflow<br><br>
+pip install pip install scikit-image<br><br>
+Mask_RCNN/samples/balloon 까지
 <br>
-#python 3.7가 아니면 작동이 정상적으로 안됨.<br>
-#3.7중에서도 3.7.16으로 진행함<br>
-pip install tensorflow<br>
-pip install pip install scikit-image<br>
-python balloon.py --dataset ../../model/balloon/datasets --weights ../../mask_rcnn_balloon.h5 --logs ../../model/balloon/logs --image ../../model/balloon/datasets/val/3800636873_ace2c2795f_b.jpg splash<br>
+<br>python balloon.py --dataset ../../model/balloon/datasets --weights ../../mask_rcnn_balloon.h5 --logs ../../model/balloon/logs --image ../../model/balloon/datasets/val/3800636873_ace2c2795f_b.jpg splash<br>
