@@ -22,7 +22,7 @@ tensorflow.keras.x로 변경
 수정 내용 : tensorflow2.x로 버전이 업그레이드 되면서 tensorflow에 패키지 디렉토리가 달라져서
 log를 사용하기 위해서는 tf.log를 tf.math.log로 변경해야함.
 <hr><br>
-##3번 수정
+##3번 수정<br>
 <img src = "https://github.com/programofktw/OpenSW_Balloon/assets/100819044/7417d241-8001-4b08-a6bd-0a46e0b2d9ac">
 <br>
 <img src = "https://github.com/programofktw/OpenSW_Balloon/assets/100819044/70300d1e-1b35-4c82-b949-4edb920dd8d2">
