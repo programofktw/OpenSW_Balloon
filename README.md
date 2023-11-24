@@ -6,7 +6,10 @@
 분반 : 금요일(6,7,8)<br>
 <hr>
 <br>
-## 참고사항<br>
+
+## 참고사항
+
+<br>
 코드를 수정하는 방법에 어려움을 겪어 ChatGPT와 다양한 블로그 글의 도움을 받아 작성하였습니다.
 참고자료<br>
 git : https://github.com/augmentedstartups/Mask_RCNN<br>
@@ -17,13 +20,18 @@ git : https://github.com/augmentedstartups/Mask_RCNN<br>
 <br>
 Readme를 작성해본적이 없어 가독성이 떨어지는 점 죄송합니다.<br>
 <hr>
+
 ## 0번 수정 텐서 플로우 버전 확인 코드 추가
+
 <br>
 <img src ="https://github.com/programofktw/OpenSW_Balloon/assets/100819044/634b9987-ebee-4c00-bb26-9845d2549f5b">
 <br>
 수정 내용 : 텐서플로우 2.x인지 확인하기위한 확인 출력문 추가<br>
 <hr>
-## 1번 수정<br>
+
+## 1번 수정
+
+<br>
 <img src = "https://github.com/programofktw/OpenSW_Balloon/assets/100819044/8f2c9228-1220-493c-913b-e6876b441a79">
 <br>
 수정 내용 : tensorflow2.x로 버전이 업그레이드 되면서 tensorflow에 keras와 tensorflow-gpu가 통합됨.
@@ -34,13 +42,19 @@ keras같은 경우 tensorflow에 내장된 패키지로 사용하기 위해서
 keras.x들을 위의 사진처럼
 tensorflow.keras.x로 변경
 <hr>
-## 2번 수정<br>
+
+## 2번 수정
+
+<br>
 <img src = "https://github.com/programofktw/OpenSW_Balloon/assets/100819044/b9c7fc8d-4dad-4c37-bfc9-5fc803065615">
 <br>
 수정 내용 : tensorflow2.x로 버전이 업그레이드 되면서 tensorflow에 패키지 디렉토리가 달라져서
 log를 사용하기 위해서는 tf.log를 tf.math.log로 변경해야함.
 <hr><br>
-## 3번 수정<br>
+
+## 3번 수정
+
+<br>
 <img src = "https://github.com/programofktw/OpenSW_Balloon/assets/100819044/7417d241-8001-4b08-a6bd-0a46e0b2d9ac">
 <br>
 <img src = "https://github.com/programofktw/OpenSW_Balloon/assets/100819044/70300d1e-1b35-4c82-b949-4edb920dd8d2">
@@ -53,14 +67,20 @@ tf.compat.v1 을 통해 호환성을 맞춰줌.
 이 수정은 코드 전반에 걸쳐서 이루어지고 있기때문에 전부 서술하는 것이 아닌 2개 정도만 서술해둠.
 
 <hr>
-## 4번 수정<br>
+
+## 4번 수정
+
+<br>
 <img src = "https://github.com/programofktw/OpenSW_Balloon/assets/100819044/92ad43da-dc05-47ba-85d3-b91493fe7e11">
 <br>
 수정 내용 : 본래 깃허브 코드의 경우 index 유효성 검사를 위한 메소드를 사용하는데 이것에서 계속해서 오류가터짐.
 <br>
 해당 오류를 고치는 방법을 알 수 없어서, index 유효성 검사를 하지 않는 메소드로 변경하여 작성
 <hr>
-## 5번 수정<br>
+
+## 5번 수정
+
+<br>
 <img src = "https://github.com/programofktw/OpenSW_Balloon/assets/100819044/f3366161-85d1-47e5-9c16-0d4d36ee658a">
 수정 내용 : KL.Reshape 메소드가 과거 github 코드에서는 문제가 없었지만 2.x버전으로 넘어오면서 오류가 생김.
 tensor를 생성할때 s[1]에 들어가는값이 들어가지 않아서 문제가 생기기 떄문이라고 확인을 하였음.
@@ -68,7 +88,10 @@ tensor를 생성할때 s[1]에 들어가는값이 들어가지 않아서 문제�
 해당 문제를 해결할 방법을 찾지 못했지만 인터넷 서치 결과
 s[1]가 None일때 -1을 대신 집어 넣으면 가능하게 함으로 써 해결.
 <hr>
-## 6번 수정<br>
+
+## 6번 수정
+
+<br>
 <img src = "https://github.com/programofktw/OpenSW_Balloon/assets/100819044/55e166de-d082-4f15-b877-fb13b90d11db">
 수정 내용 : 본래 공식 github 코드에는 use_mini_mask 값이 오류를 터트리는 것을 확인하였음.
 이를 해결하기 위해서 애초에 해당 메소드에서 파라미터로써 이를 제거함.
@@ -76,13 +99,17 @@ s[1]가 None일때 -1을 대신 집어 넣으면 가능하게 함으로 써 해�
 <br>
 <br>
 <hr>
-## 실행 과정<br><br>
+
+## 실행 과정
+
+<br><br>
 CUDA는 12.1<br>
 cudnn은 12.1에맞게 설치<br>
 아마 큰 의미는 없음<br><br>
 아나콘다 환경 제작<br>
 conda create --name (환경명) python=3.7 pip
 <br><br>
+
 ## python 3.7가 아니면 작동이 정상적으로 안됨.<br><br>
 ## 3.7중에서도 3.7.16으로 진행함<br><br>
 pip install tensorflow<br><br>
@@ -90,3 +117,17 @@ pip install pip install scikit-image<br><br>
 Mask_RCNN/samples/balloon 까지
 <br>
 <br>python balloon.py --dataset ../../model/balloon/datasets --weights ../../mask_rcnn_balloon.h5 --logs ../../model/balloon/logs --image ../../model/balloon/datasets/val/3800636873_ace2c2795f_b.jpg splash<br>
+
+<br>
+
+## 실행 결과
+<br>
+<img src="https://github.com/programofktw/OpenSW_Balloon/assets/100819044/0b3a7c80-8633-417b-916d-524b520883f7">
+코드 실행결과 Tensorflow2.11버전임을 확인할 수 있음
+<br>
+Mask_RCNN/samples/balloon에서 확인 가능
+<br>
+실행 결과 사진<br><br>
+<img src="https://github.com/programofktw/OpenSW_Balloon/assets/100819044/d5e07e23-a240-418a-9487-6da70fd159c0">
+<br><br>
+<img src="https://github.com/programofktw/OpenSW_Balloon/assets/100819044/7309f62c-cade-4f85-b083-387538562abe">
