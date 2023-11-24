@@ -11,6 +11,12 @@
 <br>
 Readme를 작성해본적이 없어 가독성이 떨어지는 점 죄송합니다.<br>
 <hr>
+##0번 수정 텐서 플로우 버전 확인 코드 추가
+<br>
+<img src ="https://github.com/programofktw/OpenSW_Balloon/assets/100819044/634b9987-ebee-4c00-bb26-9845d2549f5b">
+<br>
+수정 내용 : 텐서플로우 2.x인지 확인하기위한 확인 출력문 추가<br>
+<hr>
 ##1번 수정<br>
 <img src = "https://github.com/programofktw/OpenSW_Balloon/assets/100819044/8f2c9228-1220-493c-913b-e6876b441a79">
 <br>
